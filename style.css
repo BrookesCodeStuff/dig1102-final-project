@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input, button {
+  border-radius: 5px;
+}
+
+input {
+  line-height: 28px;
+  width: 300px;
+  border: 1px #999999 solid;
+  padding: 0 5px;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+
+#submit {
+  cursor: pointer;
+  padding: 6px 15px;
+  font-size: medium;
+  text-align: center;
+  color: #fbfbfb;
+  background-color: #b584d1;
+  border: 0px;
+}
