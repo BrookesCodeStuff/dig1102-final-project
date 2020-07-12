@@ -1,5 +1,26 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, rgb(236, 209, 158), rgb(240, 155, 187), rgb(191, 160, 241),  rgb(129, 184, 236));
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 50vw;
+  border-left: 1px dotted #202020;
+  border-right: 1px dotted #202020;
+  height: 100vh;
+  padding: 5px;
+  background-color: white;
+}
+
+h1 {
+  margin-left: 10px;
 }
 
 input, #submit {
@@ -11,6 +32,7 @@ input, #submit {
   width: 300px;
   border: 1px #999999 solid;
   padding: 0 5px;
+  margin: 0 10px;
 }
 
 input:focus, button:focus {
@@ -42,13 +64,13 @@ li {
 
 input[type="checkbox"] {
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .delete {
   background: none;
   border: none;
   margin: 0;
-  padding-left: 12px;
   font-size: 1rem;
 }
 
