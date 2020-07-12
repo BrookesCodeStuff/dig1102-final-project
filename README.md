@@ -12,3 +12,5 @@ This project builds upon Exercise 7, which was a simple to-do list app that acce
   - [x] Clicking the ✅ check should change the todo in someway, either marking it green or perhaps crossing it out
   - [x] Every todo should have an ❌ to the right that will delete the todo
   - [x] Clicking the ❌ should remove the todo from the page
+
+[Link to live site] (https://brookescodestuff.github.io/dig1102-final-project/)
