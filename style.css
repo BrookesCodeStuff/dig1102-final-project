@@ -2,11 +2,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-input, button {
+input, #submit {
   border-radius: 5px;
 }
 
-input {
+#todoField {
   line-height: 28px;
   width: 300px;
   border: 1px #999999 solid;
@@ -29,4 +29,29 @@ input:focus:invalid {
   color: #fbfbfb;
   background-color: #b584d1;
   border: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.delete {
+  background: none;
+  border: none;
+  margin: 0;
+  padding-left: 12px;
+  font-size: 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
 }
