@@ -24,7 +24,7 @@ todoListDisplay.addEventListener('click', handleClick)
 function renderList() {
     let template = todoList.map((item, index) => `
   <li  data-key='${index}' class='todo-item ${item.complete ? 'completed' : ''}'>
-    <input id='btn-${index}' type='checkbox' title='Mark as complete' ${item.complete ? 'checked' : ''} class='complete'>
+    <input data-key='${index}' id='btn-${index}' type='checkbox' title='Mark as complete' ${item.complete ? 'checked' : ''} class='complete'>
     ${item.text}
     <button data-key='${index}' class='delete' title='Delete todo item'>🗑️</button>
   </li>
@@ -37,19 +37,26 @@ function renderList() {
 // accordingly
 function handleClick(event) {
   let el = event.srcElement
-  let key = el.parentElement.dataset.key;
+  let key = el.dataset.key;
   let item = todoList[key];
-  if (el.classList.contains('complete')) {
-    handleComplete(el, key, item);
-  } else {
+  if (el.classList.contains('delete')) {
     handleDelete(el, key, item);
+  } else {
+    handleComplete(el, key, item);
   }
 }
 
 // toggle completed status of the list item
 function handleComplete(el, key, item) {
   item.complete = !item.complete;
-  el.parentElement.classList.toggle('completed');
+  if (el.localName === 'li') {
+    el.classList.toggle('completed');
+    console.log(el.firstElementChild)
+    el.firstElementChild.checked = !el.firstElementChild.checked;
+  } else {
+    el.parentElement.classList.toggle('completed');
+  }
+  
 }
 
 // delete the item from the todo list and re-render the list
